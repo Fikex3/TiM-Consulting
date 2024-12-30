@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiM Consulting</title>
+    <style>
+        /* Globalne postavke */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-size: 22px; /* Povećan font */
+        }
+        
+        h1, h2, h3 {
+            color: gold;
+        }
+
+        a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-family: 'Brush Script MT', cursive; /* Pisano slovo */
+            color: gold;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+        }
+
+        /* Navigacija */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            font-size: 1.5em; /* Povećan font */
+        }
+
+        /* Stranice */
+        section {
+            padding: 40px;
+        }
+
+        /* Home page */
+        .home-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .home-text {
+            width: 50%;
+            font-size: 20px; /* Povećan font */
+        }
+
+        .home-image {
+            width: 45%;
+        }
+
+        /* About page */
+        #about {
+            display: flex;
+            justify-content: space-between; /* Tekst s leve strane, slika s desne */
+            padding: 40px;
+            font-size: 20px; /* Povećan font */
+        }
+
+        #about .about-text {
+            width: 50%; /* Text will occupy 50% of space */
+            text-align: left; /* Aligning text to the left */
+            margin-right: 20px;
+        }
+
+        #about .about-image {
+            width: 45%; /* Slika će zauzimati 45% prostora */
+        }
+
+        #about p {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        #about h2 {
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: gold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive dizajn za mobilne uređaje */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                text-align: center;
+                width: 100%;
+                background-color: black;
+                padding: 20px 0;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav.active ul {
+                display: block;
+            }
+
+            .home-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-text, .home-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* About page */
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about .about-text, #about .about-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">TiM Consulting</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="navMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Page -->
+<section id="home">
+    <div class="home-content">
+        <div class="home-text">
+            <h1>Dobrodošli u TiM Consulting – Vaš Partner za Računovodstvene i Knjigovodstvene Usluge</h1>
+            <p>U savremenom poslovnom svetu, uspeh vaše kompanije ne zavisi samo od vaših poslovnih ideja i strategija, već i od efikasnog i pravilnog upravljanja finansijama. U agenciji <strong>TiM Consulting</strong> pružamo vrhunske računovodstvene i knjigovodstvene usluge koje vam omogućavaju da se fokusirate na ono što je zaista važno - rast i razvoj vašeg poslovanja. Naša misija je da pružimo besprekorno računovodstveno savetovanje i podršku kako bi vaša firma bila u potpunosti usklađena sa zakonodavstvom, kao i finansijski stabilna.</p>
+            <h2>Naše usluge</h2>
+            <ul>
+                <li><strong>Računovodstvene usluge</strong> – od vođenja poslovnih knjiga do pripreme finansijskih izveštaja.</li>
+                <li><strong>Knjigovodstvene usluge</strong> – pružamo efikasno praćenje poslovnih transakcija.</li>
+                <li><strong>Savetovanje i porezi</strong> – optimizujemo poreške obaveze kroz strategije koje vam pomažu da uštedite.</li>
+                <li><strong>Izveštaji i analiza</strong> – pružamo detaljnu analizu vaših finansijskih podataka.</li>
+                <li><strong>Obuka za računovodstvo</strong> – obuke prilagođene vašim potrebama.</li>
+            </ul>
+
+            <h2>Zašto izabrati nas?</h2>
+            <ul>
+                <li><strong>Stručnost:</strong> Naš tim se sastoji od visoko obučenih i kvalifikovanih stručnjaka sa dugogodišnjim iskustvom.</li>
+                <li><strong>Prilagođeni pristup:</strong> Svakom klijentu pristupamo sa pažnjom i fokusiramo se na njegove specifične potrebe.</li>
+                <li><strong>Transparentnost i poverenje:</strong> Naša filozofija je bazirana na otvorenoj i transparentnoj komunikaciji.</li>
+                <li><strong>Efikasnost:</strong> Pružamo brza i precizna rešenja koja omogućavaju našim klijentima da donesu informisane poslovne odluke.</li>
+            </ul>
+        </div>
+        <div class="home-image">
+            <img src="logo.png" alt="Slika za home page" style="width: 100%; height: auto;">
+        </div>
+    </div>
+</section>
+
+<!-- About Page -->
+<section id="about">
+    <div class="about-text">
+        <h1>O nama – TiM Consulting: Stručnjaci koji Brinu o Vašim Finansijama</h1>
+        <p>"TiM Consulting" je agencija koja je posvećena tome da postane najpouzdaniji partner preduzetnicima i preduzećima u Bosni i Hercegovini, kada je u pitanju vođenje računovodstvenih i knjigovodstvenih usluga. Naša misija je da vam pomognemo da efikasno upravljate svojim finansijama, pružajući vam stručnu podršku, savete i strategije koje omogućavaju vašem preduzeću da raste i razvija se, u skladu sa svim zakonskim obavezama.</p>
+
+        <h2>Naša filozofija</h2>
+        <p>U "TiM Consulting" verujemo da uspeh dolazi kroz detaljan i pažljiv pristup svakom klijentu. Svaka firma ima svoje specifičnosti i izazove, te stoga ne postoji jedno rešenje koje bi odgovaralo svim. Naša filozofija je da se trudimo da razumemo vaš poslovni model, kao i njegove unutrašnje potrebe, kako bismo vam ponudili personalizovane usluge koje su direktno usmerene na vašu stabilnost i rast.</p>
+
+        <h2>Naš tim</h2>
+        <p>Naš tim čine računovođe, knjigovođe i poslovni savetnici koji se kontinuirano usavršavaju i prate sve novine u zakonodavstvu i tržišnim trendovima. Svaki član tima je posvećen tome da vam pruži najviši nivo usluge i maksimalnu efikasnost. Sa bogatstvom iskustva u različitim industrijama, od malih preduzetnika do velikih korporacija, možemo da obezbedimo uslugu koja odgovara vašim potrebama i izazovima.</p>
+
+        <h2>Zašto je računovodstvo važno?</h2>
+        <p>Računovodstvo je srce svakog uspešnog preduzetnika. Ono omogućava da imate kontrolu nad svim aspektima vaših finansija, da budete u skladu sa zakonima i da preduzimate informisane poslovne odluke. Dobar računovođa nije samo neko ko vodi evidenciju i priprema izveštaje – on je vaš poslovni partner koji vam pomaže da razumete svoje finansije i pronađete načine za poboljšanje profitabilnosti i efikasnosti.</p>
+
+        <h2>Naša vizija</h2>
+        <p>Naša vizija je da postanemo lider u pružanju računovodstvenih i knjigovodstvenih usluga na tržištu Srbije. Želimo da pružimo kvalitetne i pouzdane usluge koje će omogućiti našim klijentima da ostvare svoje poslovne ciljeve i prevaziđu sve izazove sa kojima se suočavaju. Naš fokus je na izgradnji dugoročnih odnosa sa našim klijentima, temeljenih na poverenju, profesionalizmu i zajedničkom uspehu.</p>
+
+        <h2>Kontaktirajte nas</h2>
+        <p>Ukoliko imate pitanja ili želite da saznate više o našim uslugama, slobodno nas kontaktirajte. U TiM Consulting-u smo uvek spremni da odgovorimo na vaše zahteve i obezbedimo sveobuhvatnu podršku za vaš poslovni uspeh.</p>
+    </div>
+    <div class="about-image">
+        <img src="logo2.png" alt="Slika o nama" style="width: 100%; height: auto;">
+    </div>
+</section>
+
+<!-- Contact Page -->
+<section id="contact">
+    <h1>Kontaktirajte nas</h1>
+    <p>Za sva pitanja ili dodatne informacije, slobodno nas kontaktirajte putem sledećih podataka:</p>
+    <ul>
+        <li><strong>Email:</strong> tim.consulting.tb@gmail.com</li>
+        <li><strong>Telefon:</strong> +387 65 619069</li>
+        <li><strong>Adresa:</strong> Trebinje, Bosna i Hercegovina</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 TiM Consulting. Sva prava zadržana. | <a href="#home">Početna</a> | <a href="#about">O nama</a> | <a href="#contact">Kontakt</a></p>
+</footer>
+
+<script>
+    // Funkcija za hamburger meni
+    function toggleMenu() {
+        var nav = document.getElementById("navMenu");
+        nav.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
